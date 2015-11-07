@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# update 
+sudo apt-get update
+
+# aptitude
+sudo apt-get install aptitude
+
+#apt-repo
+sudo aptitude install python-software-properties
+
+#konsole, krusader
+sudo aptitude install konsole krusader
+
+#vim
+sudo aptitude install vim
+
+#chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo aptitude update 
+sudo aptitude install google-chrome-stable
+
+#skype
+sudo dpkg --add-architecture i386
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+sudo aptitude update && sudo aptitude install skype
+
+#git
+sudo aptitude install git
+
+#rar
+sudo aptitude install rar
+
+#zsh,oh-my
+sudo aptitude install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#PPA: nginx,php,mysql
+sudo add-apt-repository ppa:nginx/stable
+sudo add-apt-repository ppa:ondrej/php5-5.6
+sudo add-apt-repository ppa:ondrej/mysql-5.6
+sudo aptitude update
+
+#LEMP
+sudo aptitude install mysql-server php5-mysql
+sudo mysql_install_db
+
+sudo aptitude install nginx
+sudo aptitude install php5-fpm php5-mcrypt php5-json php5-curl php5-gd php5-intl
+
+#google-drive
+sudo aptitude install grive
+
+#ccsm
+sudo aptitude install compiz compizconfig-settings-manager  compiz-plugins  
