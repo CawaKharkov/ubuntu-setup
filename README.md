@@ -1,7 +1,7 @@
 # ubuntu-setup
 Setting up clean installation of Ubuntu
 
-** Tested on 15.1
+*Tested on 15.1*
 
 
 ## Usage
